@@ -8,7 +8,7 @@ Event Store stores indexes separately from the main data files accessing records
 
 ## Overview
 
-Event Store creates index entries as clients commit events. It holds these in memory until the `MaxMemTableSize` is reached and then persisted on disk in the _index_ folder along with an index map file.
+Event Store creates index entries as it processes commit events. It holds these in memory until the `MaxMemTableSize` is reached and then persisted on disk in the _index_ folder along with an index map file.
 The index files are uniquely named, and the index map file is called _indexmap_. The index map describes the order and the level of the index file as well as containing the data checkpoint for the last written file, the version of the index map file and a checksum for the index map file. The index files are referred to a _PTables_ in the logs.
 
 Indexes are sorted lists based on the hashes of stream names. To speed up seeking the correct location in the file of an entry for a stream, midpoints are kept to relate the stream hash to the physical offset in the file.
