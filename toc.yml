@@ -116,6 +116,8 @@
       href: server/stats-debug.md
     - name: Caching
       href: server/caching.md
+    - name: Indexing
+      href: server/indexing.md
     - name: Database Backup
       href: server/database-backup.md
     - name: System Streams

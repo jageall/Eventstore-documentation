@@ -58,6 +58,11 @@
         "dest": "server/caching"
       },
       {
+        "files": "indexing.md",
+        "src": "server",
+        "dest": "server/indexing"
+      },
+      {
         "files": "cluster-with-manager-nodes.md",
         "src": "server",
         "dest": "server/cluster-with-manager-nodes"
