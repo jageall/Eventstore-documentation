@@ -76,7 +76,7 @@ In the event of corruption indexes will be rebuilt by reading through all the ch
 
 For example:
 
-> Merging 2 level 7 files results in at least 3072MB of reads (2 \* 1536MB), and 3072MB writes while merging 2 level 8 files together results in at least . Setting `MaxAutoMergeLevel` to 7 allows all levels up to and including level 7 to be automatically merged, but to merge the level 8 files together, you need to trigger a manual merge. This manual merge allows better control over when these larger merges happen and which nodes they happen on. Due to the replication process, all nodes tend to merge at about the same time.
+> Merging 2 level 7 files results in at least 3072MB reads (2 \* 1536MB), and 3072MB writes while merging 2 level 8 files together results in at least 6144MB reads (2 \* 3072MB) and 6144MB writes. Setting `MaxAutoMergeLevel` to 7 allows all levels up to and including level 7 to be automatically merged, but to merge the level 8 files together, you need to trigger a manual merge. This manual merge allows better control over when these larger merges happen and which nodes they happen on. Due to the replication process, all nodes tend to merge at about the same time.
 
 ### OptimizeIndexMerge
 
